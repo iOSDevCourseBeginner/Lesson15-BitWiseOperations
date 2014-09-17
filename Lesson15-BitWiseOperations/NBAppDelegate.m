@@ -21,18 +21,10 @@
     
     NBStudent* student = [[NBStudent alloc] init];
     
-    student.studiesAnatomy = NO;
-    student.studiesMath = YES;
-    student.studiesMusic = YES;
-    student.studiesProgramming = YES;
-    student.studiesArt = YES;
-    student.studiesBiology = NO;
-    student.studiesPhilosophy = NO;
+    student.subjectType =   NBStudentSubjectArt | NBStudentSubjectBiology | NBStudentSubjectMath |
+                            NBStudentSubjectMusic | NBStudentSubjectProgramming;
     
     NSLog(@"%@", student);
-    
-    
-    
     
     //-------------------------------------------------------------------------------
     return YES;

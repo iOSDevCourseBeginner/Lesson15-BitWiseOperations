@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>31D48593-45EE-4D27-A2D2-87353CDFBF26</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Lesson15-BitWiseOperations</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>93734224-E1DD-42F8-A9FD-37001E320A21</key>
+		<string>https://github.com/iOSDevCourseBeginner/Lesson15-BitWiseOperations.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Lesson15-BitWiseOperations.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>93734224-E1DD-42F8-A9FD-37001E320A21</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/iOSDevCourseBeginner/Lesson15-BitWiseOperations.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>93734224-E1DD-42F8-A9FD-37001E320A21</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>93734224-E1DD-42F8-A9FD-37001E320A21</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Lesson15-BitWiseOperations</string>
+		</dict>
+	</array>
+</dict>
+</plist>

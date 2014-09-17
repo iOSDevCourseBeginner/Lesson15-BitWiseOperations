@@ -11,18 +11,16 @@
 @interface NBStudent : NSObject
 
 typedef enum {
-    studiesMath,
-    studies 
-    
-} NBStudentStudies;
+    NBStudentSubjectMath            = 1 << 0,
+    NBStudentSubjectBiology         = 1 << 1,
+    NBStudentSubjectArt             = 1 << 2,
+    NBStudentSubjectAnatomy         = 1 << 3,
+    NBStudentSubjectProgramming     = 1 << 4,
+    NBStudentSubjectPhilosophy      = 1 << 5,
+    NBStudentSubjectMusic           = 1 << 6
+} NBStudentSubjectType;
 
-@property (assign, nonatomic) BOOL studiesMath;
-@property (assign, nonatomic) BOOL studiesBiology;
-@property (assign, nonatomic) BOOL studiesArt;
-@property (assign, nonatomic) BOOL studiesAnatomy;
-@property (assign, nonatomic) BOOL studiesProgramming;
-@property (assign, nonatomic) BOOL studiesPhilosophy;
-@property (assign, nonatomic) BOOL studiesMusic;
+@property (assign, nonatomic) NBStudentSubjectType subjectType;
 
 
 @end
