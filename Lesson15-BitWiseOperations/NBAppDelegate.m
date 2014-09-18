@@ -19,7 +19,13 @@
     [self.window makeKeyAndVisible];
     //-------------------------------------------------------------------------------
     
-    NBStudent* student = [[NBStudent alloc] init];
+    NSMutableArray* studentsList = [NSMutableArray array];
+    
+    for (int i = 0; i =< 10; i++) {
+        NBStudent* student = [[NBStudent alloc] init];
+        [studentsList addObject:student];
+    }
+    
     
     student.subjectType =   NBStudentSubjectArt | NBStudentSubjectBiology | NBStudentSubjectMath |
                             NBStudentSubjectMusic | NBStudentSubjectProgramming;

@@ -20,13 +20,13 @@
                                         "Programming - %@\n"
                                         "Philosophy - %@\n"
                                         "Music - %@",
-                                        self.studiesMath ? @"YES" : @"NO",
-                                        self.studiesBiology ? @"YES" : @"NO",
-                                        self.studiesArt ? @"YES" : @"NO",
-                                        self.studiesAnatomy ? @"YES" : @"NO",
-                                        self.studiesProgramming ? @"YES" : @"NO",
-                                        self.studiesPhilosophy ? @"YES" : @"NO",
-                                        self.studiesMusic ? @"YES" : @"NO"];
+                                        self.subjectType & NBStudentSubjectMath ? @"YES" : @"NO",
+                                        self.subjectType & NBStudentSubjectBiology ? @"YES" : @"NO",
+                                        self.subjectType & NBStudentSubjectArt ? @"YES" : @"NO",
+                                        self.subjectType & NBStudentSubjectAnatomy ? @"YES" : @"NO",
+                                        self.subjectType & NBStudentSubjectProgramming ? @"YES" : @"NO",
+                                        self.subjectType & NBStudentSubjectPhilosophy ? @"YES" : @"NO",
+                                        self.subjectType & NBStudentSubjectMusic ? @"YES" : @"NO"];
 }
 
 @end
