@@ -18,9 +18,12 @@ typedef enum {
     NBStudentSubjectProgramming     = 1 << 4,
     NBStudentSubjectPhilosophy      = 1 << 5,
     NBStudentSubjectMusic           = 1 << 6
+    
 } NBStudentSubjectType;
 
 @property (assign, nonatomic) NBStudentSubjectType subjectType;
+@property (strong, nonatomic) NSString* name;
 
+- (id)initWithName: (NSString*) name;
 
 @end

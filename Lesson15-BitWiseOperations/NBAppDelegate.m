@@ -21,16 +21,24 @@
     
     NSMutableArray* studentsList = [NSMutableArray array];
     
-    for (int i = 0; i =< 10; i++) {
-        NBStudent* student = [[NBStudent alloc] init];
-        [studentsList addObject:student];
+    for (NSInteger i = 0; i < 10; i++) {
+        NBStudent* student = [[NBStudent alloc] initWithName:[NSString stringWithFormat:@"Student#%d", i + 1]];
+        [studentsList addObject: student];
+    }
+    
+    for (NBStudent* student in studentsList) {
+        student.subjectType = arc4random() % 64;
     }
     
     
-    student.subjectType =   NBStudentSubjectArt | NBStudentSubjectBiology | NBStudentSubjectMath |
-                            NBStudentSubjectMusic | NBStudentSubjectProgramming;
+    NSLog(@"%@", studentsList);
     
-    NSLog(@"%@", student);
+    
+    
+    
+    
+    
+    
     
     //-------------------------------------------------------------------------------
     return YES;
