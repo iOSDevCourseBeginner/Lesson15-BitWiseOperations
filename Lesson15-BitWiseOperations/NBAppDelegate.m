@@ -19,7 +19,7 @@
     [self.window makeKeyAndVisible];
     //-------------------------------------------------------------------------------
     
-#pragma mark - Student
+#pragma mark - Learner & Student
     
     NSMutableArray* studentsList = [NSMutableArray array];
     NSMutableArray* studentsGeeks = [NSMutableArray array];
@@ -59,6 +59,16 @@
   
     }
     
+#pragma mark - Superman
+    
+    NSMutableString* bit = [[NSMutableString alloc] init];
+    NSInteger bitMask = 1;
+    NSInteger integer = arc4random_uniform(NSIntegerMax);
+    
+    for (int i = 0; i < 32; i++) {
+        (integer & bitMask) ? [bit insertString:@"1" atIndex: 0] : [bit insertString:@"0" atIndex:0];
+        bitMask <<= 1;
+    }
     
     
     //NSLog(@"%@", studentsList);
@@ -66,7 +76,8 @@
     NSLog(@"Humanities list: %@", studentsHumanities);
     NSLog(@"Geeks list: %@", studentsGeeks);
     NSLog(@"All programmers - %d", [studentsProgrammers count]);
-
+    
+    NSLog(@"integer = %d, bit = %@", integer, bit);
     
     //-------------------------------------------------------------------------------
     return YES;
