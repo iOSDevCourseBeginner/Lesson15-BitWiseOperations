@@ -19,26 +19,54 @@
     [self.window makeKeyAndVisible];
     //-------------------------------------------------------------------------------
     
+#pragma mark - Student
+    
     NSMutableArray* studentsList = [NSMutableArray array];
+    NSMutableArray* studentsGeeks = [NSMutableArray array];
+    NSMutableArray* studentsHumanities = [NSMutableArray array];
+    NSMutableArray* studentsProgrammers = [NSMutableArray array];
     
     for (NSInteger i = 0; i < 10; i++) {
-        NBStudent* student = [[NBStudent alloc] initWithName:[NSString stringWithFormat:@"Student#%d", i + 1]];
+        NBStudent* student = [[NBStudent alloc] initWithName:[NSString stringWithFormat:@"Student#%d", i+1]];
         [studentsList addObject: student];
     }
     
     for (NBStudent* student in studentsList) {
         student.subjectType = arc4random() % 64;
+
+    }
+    
+    for (NBStudent* student in studentsList) {
+        if  ((student.subjectType & NBStudentSubjectMath) ||
+            (student.subjectType & NBStudentSubjectProgramming))
+            [studentsGeeks addObject: student];
+        
+        else if ((student.subjectType & NBStudentSubjectMusic) ||
+                 (student.subjectType & NBStudentSubjectArt))
+            [studentsHumanities addObject: student];
+        
+        if (student.subjectType & NBStudentSubjectProgramming) {
+            [studentsProgrammers addObject: student];
+        }
+        
+#pragma mark - Master
+        
+        if (student.subjectType & NBStudentSubjectBiology) {
+            student.subjectType = (~NBStudentSubjectBiology) & student.subjectType;
+            NSLog(@"%@ cancel biology", student.name);
+        }
+            
+  
     }
     
     
-    NSLog(@"%@", studentsList);
     
-    
-    
-    
-    
-    
-    
+    //NSLog(@"%@", studentsList);
+
+    NSLog(@"Humanities list: %@", studentsHumanities);
+    NSLog(@"Geeks list: %@", studentsGeeks);
+    NSLog(@"All programmers - %d", [studentsProgrammers count]);
+
     
     //-------------------------------------------------------------------------------
     return YES;
